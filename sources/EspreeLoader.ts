@@ -1,7 +1,7 @@
-import type { Payload } from "magiked"
+import type { Payload } from "../dependencies/magiked.ts"
 
-import { espree } from "espree";
-import type { EspreeParseOptions, EspreeAst } from "espree";
+import { espree } from "../dependencies/espree/mod.ts";
+import type { EspreeParseOptions, EspreeAst } from "../dependencies/espree/mod.ts";
 
 const readTextFileAsync = Deno.readTextFile
 

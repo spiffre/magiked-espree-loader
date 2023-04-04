@@ -1,3 +1,6 @@
+/**
+ * espree v9.4.0
+ */
 import type * as EspreeAst from "./ast.ts"
 
 import { parse } from "./espree-and-evk.js";

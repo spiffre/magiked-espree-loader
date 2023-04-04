@@ -1,3 +1,6 @@
+/**
+ * eslint-visitor-keys v3.3.0
+ */
 
 /**
  * @type {VisitorKeys}

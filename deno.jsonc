@@ -1,14 +1,4 @@
 {
-	"imports":
-	{
-		"std:path": "https://deno.land/std@0.182.0/path/mod.ts",
-		"std:asserts": "https://deno.land/std@0.182.0/testing/asserts.ts",
-		
-		"espree": "./dependencies/espree@9.4.0/mod.ts",
-		
-		"magiked": /*/ "../magiked/mod.ts" /*/ "https://deno.land/x/magiked@v0.5.0/mod.ts" /**/
-	},
-		
 	"lint":
 	{
 		"files":
