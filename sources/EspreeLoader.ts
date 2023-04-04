@@ -11,6 +11,14 @@ const ESPREE_PARSE_OPTIONS: EspreeParseOptions =
 	sourceType: "module",
 }
 
+interface EspreeParseError extends Error
+{
+	index: number
+	column: number
+	lineNumber: number
+	message: string
+}
+
 export interface JavascriptPayload extends Payload
 {
 	// fixme: How to force type and extension to be re-defined ?
@@ -37,6 +45,8 @@ export async function defaultJavascriptLoader (filepath: string, options?: Espre
 	}
 	catch (error)
 	{
-		throw new Error(`Failed to parse file: ${filepath}\n${error}`)
+		const { index, lineNumber : line, column, message } = error as EspreeParseError
+		const details = `${message}:\nAt line ${line}, column ${column} (index ${index})`
+		throw new Error(`Failed to parse file: ${filepath}\n${details}\n\n${error}`)
 	}
 }
