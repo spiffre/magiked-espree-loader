@@ -23,12 +23,20 @@ export interface JavascriptPayload extends Payload
 export async function defaultJavascriptLoader (filepath: string, options?: EspreeParseOptions): Promise<JavascriptPayload>
 {
 	const content = await readTextFileAsync(filepath)
-	const rootAst = espree.parse(content, { ...ESPREE_PARSE_OPTIONS, ...options })
+	
+	try
+	{
+		const rootAst = espree.parse(content, { ...ESPREE_PARSE_OPTIONS, ...options })
 
-	return {
-		type : 'javascript',
-		extension : '.js',
-		
-		rootAst
+		return {
+			type : 'javascript',
+			extension : '.js',
+			
+			rootAst
+		}
+	}
+	catch (error)
+	{
+		throw new Error(`Failed to parse file: ${filepath}\n${error}`)
 	}
 }
