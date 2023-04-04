@@ -45,8 +45,8 @@ export async function defaultJavascriptLoader (filepath: string, options?: Espre
 	}
 	catch (error)
 	{
-		const { index, lineNumber : line, column, message } = error as EspreeParseError
-		const details = `${message}:\nAt line ${line}, column ${column} (index ${index})`
+		const { index, lineNumber : line, column } = error as EspreeParseError
+		const details = `At line ${line}, column ${column} (index ${index})`
 		throw new Error(`Failed to parse file: ${filepath}\n${details}\n\n${error}`)
 	}
 }
