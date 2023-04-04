@@ -1,0 +1,8 @@
+{
+  "name": "@spiffre/magiked-espree-loader",
+  "scripts": {
+    "check": "deno check ./mod.ts",
+    "test": "deno test --allow-all",
+    "testw": "deno test --allow-all --watch"
+  }
+}
