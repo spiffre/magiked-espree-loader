@@ -1,7 +1,7 @@
-import { assert, assertExists, assertRejects } from "../dependencies/std/assert.ts";
-import * as path from "../dependencies/std/path.ts"
+import { assert, assertExists, assertRejects } from "../deps/std/assert.ts";
+import * as path from "../deps/std/path.ts"
 
-import { Walker } from "../dependencies/magiked.ts"
+import { Walker } from "../deps/magiked.ts"
 
 import type { JavascriptPayload } from "./EspreeLoader.ts"
 import { defaultJavascriptLoader } from "./EspreeLoader.ts"
