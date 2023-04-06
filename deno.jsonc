@@ -1,4 +1,13 @@
 {
+	"name": "@spiffre/magiked-espree-loader",
+	"tasks":
+	{
+		"tc": "deno check ./mod.ts",
+		"test": "deno test --allow-all",
+		"testw": "deno test --allow-all --watch",
+		"link": "devtools/link.sh",
+		"unlink": "devtools/unlink.sh"
+	},
 	"lint":
 	{
 		"files":
